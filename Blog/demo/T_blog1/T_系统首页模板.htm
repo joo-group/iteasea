@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <stl:include file="@/include/meta.html" />
+    <title>{stl:value type="slogn"} - {Stl.SiteName}</title>
+</head>
+<body>
+    <div class="global-box area">
+        <stl:include file="@/include/ResponsiveNav.html" />
+        <stl:include file="@/include/FixedNav.html" />
+        <div class="jo-right">
+            <div class="main-box clearfix">
+                <div class="lft">
+                    <div class="jo-content">
+                        <stl:include file="@/include/foucs.html" />
+                        <div class="post-autor">
+                            <div class="inner-wrap">
+                                <div class="post-list">
+                                    <div class="news-list">
+                                            <stl:Contents totalNum="20" channelIndex="首页" groupChannelNot="Not" scope="All" order="AddDate">
+                                                <div class="item clearfix">
+                                                    <div class="thumb-img">
+                                                        <stl:a title="{Content.Title}">
+                                                            <stl:image alt="{Content.Title}" />
+                                                        </stl:a>
+                                                        <div class="comment-o hidden-xs"><i class="fa  fa-github"></i> 
+                                                            <stl:content type="Hits" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-con">
+                                                        <h2 class="nopd"><stl:a>{Content.Title}</stl:a></h2>
+                                                        <p class="des nopd">
+                                                            <stl:content type="Summary" isClearTags="true" />
+                                                        </p>
+                                                        <div class="autor-meta joimg"> 
+                                                            <span class="in-tags">
+                                                                   <i class="fa fa-tags"></i> <stl:tags>
+                                                                <stl:a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">{Tag.Name}</stl:a>
+                                                            </stl:tags>
+                                                               </span>
+                                                            <span class="in-times hidden-xs"><i class="fa fa-clock-o"></i><stl:content type="AddDate" formatString="MM-dd" /> </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </stl:Contents>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <stl:include file="@/include/foot.html" />
+        </div>
+    </div>
+</body>
+</html>
+<stl:include file="@/include/js.html" />

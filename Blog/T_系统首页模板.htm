@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <stl:include file="@/include/meta.html" />
+    <title>{stl:value type="slogn"} - {Stl.SiteName}</title>
+</head>
+<body>
+    <div class="global-box area">
+        <stl:include file="@/include/ResponsiveNav.html" />
+        <stl:include file="@/include/FixedNav.html" />
+        <div class="jo-right">
+            <div class="main-box clearfix">
+                <div class="lft">
+                    <div class="jo-content">
+                        <stl:include file="@/include/foucs.html" />
+                        <div class="post-autor">
+                            <div class="inner-wrap">
+                                <div class="post-list">
+                                    <div class="news-list">
+                                            <stl:Contents totalNum="20" channelIndex="首页" groupChannelNot="Not" scope="All" order="AddDate">
+                                                <div class="item clearfix">
+                                                    <stl:if testType="ImageUrl" testOperate="Empty" testValue="true">  
+  <stl:successTemplate>
+    <div class="thumb-img random-img">
+      <img src="" alt="{Content.Title}" />
+    </div>
+  </stl:successTemplate>
+  <stl:failureTemplate>
+    <div class="thumb-img">
+      <stl:image alt="{Content.Title}" />
+      <div class="comment-o hidden-xs">
+       <i class="fa fa-clock-o"></i> <stl:content type="AddDate" formatString="MM-dd" />
+      </div>
+    </div>
+  </stl:failureTemplate>
+</stl:if>
+                                                    <div class="item-con">
+<stl:if testType="LinkUrl" testOperate="Empty" testValue="true">
+  <stl:successTemplate>
+  <h2 class="nopd"><stl:a title="{Content.Title}">{Content.Title}</stl:a></h2>
+  </stl:successTemplate>
+  <stl:failureTemplate><h2 class="nopd"><stl:a target="_blank" title="{Content.Title}"><i class="fa fa-link fa-linlin"></i>&nbsp;{Content.Title}</stl:a></h2></stl:failureTemplate>
+</stl:if>
+                                                     
+                                                        <p class="des nopd">
+                                                            <stl:content type="Summary" isClearTags="true" />
+                                                        </p>
+                                                        <div class="autor-meta joimg"> 
+                                                            <span class="in-tags">
+                                                                   <i class="fa fa-tags"></i> <stl:tags>
+                                                                <stl:a title="{Tag.Name}" href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">#{Tag.Name}</stl:a>
+                                                            </stl:tags>
+                                                               </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </stl:Contents>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <stl:include file="@/include/foot.html" />
+        </div>
+    </div>
+</body>
+</html>
+<stl:include file="@/include/js.html" />

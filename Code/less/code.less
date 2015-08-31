@@ -1,0 +1,182 @@
+body,
+html {
+	height:100%;
+	font-family:"Microsoft Yahei";
+	color:#fff;
+}
+.code-wrapper {
+	background-image:url(../images/bg.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+    background-size: cover;
+	
+	.fixed-home {
+		display:inline-block;
+		height:50px;
+		width:50px;
+		border-radius:50px;
+		font-size:20px;
+		text-indent:-1px;
+		color:#fff;
+		line-height:50px;
+		text-align:center;
+		background:rgba(255, 255, 255, .2);
+		
+		&:hover { 
+			color:pink;
+			-moz-transition: all .5s ease-in-out;
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+		}
+	}
+	h1 {
+		font-size:10rem;
+		color:#fff;
+		text-align:center;
+		margin-bottom:2rem;
+	}
+	.code-contents {
+		width:100%;
+		border-radius:15px;
+		padding:15px;
+		padding-bottom:0;
+		background:rgba(255, 255, 255, 0.37);
+	}
+	.col-md-6 {
+		margin-bottom:15px;
+		
+		.contents {
+			position:relative;
+			height:330px;
+			
+			.symbol {
+				position:absolute;
+				top:100px;
+				width:100%;
+				height:50px;
+				font-size:50px;
+				text-align:center;
+				}
+			.title {
+				padding-top:200px;
+				font-size:3rem;
+				color:#fff;
+				text-align:center;
+				
+				a {
+					color:#fff;
+					text-decoration:blink;
+				}
+			}
+			.adddate {
+				position:absolute;
+				bottom:10px;
+				left:10px;
+				font-size:12px;
+			}
+			.hits {
+				position:absolute;
+				bottom:10px;
+				right:10px;
+				font-size:12px;
+				text-align:right;
+			}
+		}
+		&:hover {
+			-webkit-animation:pulse 1s .2s ease both;
+			-moz-animation:pulse 1s .2s ease both;
+			-ms-animation:pulse 1s .2s ease both;
+			-o-animation:pulse 1s .2s ease both;
+			animation:pulse 1s .2s ease both;
+			z-index:999;
+		}
+	}
+	.page-btn {
+		display:block;
+		text-align:center; 
+		width:100px;
+		height:40px;
+		line-height:40px;
+		background:#F60;
+		border-radius:5px;
+		background:rgba(255,255,255,0.5) url(../images/ico-pagination-arrow-next.png) no-repeat center center;
+		margin:20px auto;
+		&:hover {
+			background:rgba(255,153,153,1) url(../images/ico-pagination-arrow-next.png) no-repeat 70px center;
+			-moz-transition: all .2s ease-in-out;
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+	}
+	.col-md-6:nth-child(10n+1) .contents {
+			background: rgba(255,0,0,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(255,0,0,.5);
+	}
+	.col-md-6:nth-child(10n+2) .contents {
+			background: rgba(0,153,255,.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(0,153,255,.5);
+	}
+	.col-md-6:nth-child(10n+3) .contents {
+			background: rgba(0,204,153,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(0,204,153,.5);
+	}
+	.col-md-6:nth-child(10n+4) .contents {
+			background: rgba(102,51,255,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(102,51,255,.5);
+	}
+	.col-md-6:nth-child(10n+5) .contents {
+			background: rgba(102,153,204,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(102,153,204,.5);
+	}
+	.col-md-6:nth-child(10n+6) .contents {
+			background: rgba(102,204,204,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(102,204,204,.5);
+	}
+	.col-md-6:nth-child(10n+7) .contents {
+			background: rgba(153,204,51,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(153,204,51,.5);
+	}
+	.col-md-6:nth-child(10n+8) .contents {
+			background: rgba(204,51,153,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(204,51,153,.5);
+	}
+	.col-md-6:nth-child(10n+9) .contents {
+			background: rgba(255,102,102,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(255,102,102,.5);
+	}
+	.col-md-6:nth-child(10n+10) .contents {
+			background: rgba(255,102,51,0.3);
+			border-radius: 10px 10px 5px 5px;
+			box-shadow: 0 5px rgba(255,102,51,.5);
+	}
+}
+footer {
+	text-align:center;
+	color:#fff;
+	margin:15px 0;	
+}
+@-webkit-keyframes pulse{
+	0%{-webkit-transform:scale(1)}
+	50%{-webkit-transform:scale(1.1)}
+	100%{-webkit-transform:scale(1)}
+}
+@-moz-keyframes pulse{
+	0%{-moz-transform:scale(1)}
+	50%{-moz-transform:scale(1.1)}
+	100%{-moz-transform:scale(1)}
+}
+@keyframes pulse{
+	0%{transform:scale(1)}
+	50%{transform:scale(1.1)}
+	100%{transform:scale(1)}
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<stl:include file="@/include/meta.html" />
+<title>标签云|{Stl.SiteName}</title>
+</head>
+
+<body>
+<div class="global-box area">
+<stl:include file="@/include/ResponsiveNav.html" />
+<stl:include file="@/include/FixedNav.html" />
+<stl:include file="@/include/login.html" />
+<div class="jo-right">
+<div class="main-box-c clearfix">
+<div class="lft">
+<div class="jo-content-c">
+<div class="clearfix"></div>
+<div class="category-title">
+<h2><i class="fa fa-tag"></i>  <stl:dynamic>{Request.tagname}</stl:dynamic></h2>
+</div>
+<div class="jo-contents padding-xs">
+
+<div class="post-autor">
+<div class="inner-wrap">
+<div class="post-list">
+<div class="news-list">
+<stl:dynamic>
+<stl:pageContents topLevel="0" scope="All" pageNum="12" tags="{Request.tagname}" order="AddDate">
+<stl:if testType="ImageUrl" testOperate="Empty" testValue="true"> 
+<stl:failureTemplate>
+<div class="item clearfix">
+<div class="thumb-img">
+<stl:image alt="{Content.Title}" />
+</div>
+<div class="item-con">
+<stl:if testType="LinkUrl" testOperate="Empty" testValue="true">
+<stl:successTemplate>
+<h2 class="nopd"><stl:a title="{Content.Title}">{Content.Title}</stl:a></h2>
+</stl:successTemplate>
+<stl:failureTemplate><h2 class="nopd"><stl:a target="_blank" title="{Content.Title}"><i class="fa fa-link fa-linlin"></i>&nbsp;{Content.Title}</stl:a></h2></stl:failureTemplate>
+</stl:if>
+<p class="des">
+<stl:content type="Summary" />
+</p>
+<div class="autor-meta joimg">
+<span class="in-tags">
+<i class="fa fa-tags"></i> 
+<stl:tags>
+<stl:a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">#{Tag.Name}</stl:a>
+</stl:tags>
+</span>
+<span class="in-times hidden-xs"><i class="fa fa-clock-o"></i> {Content.AddDate} </span>
+</div>
+
+</div>
+</div>
+</stl:failureTemplate>
+<stl:successTemplate>
+<div class="item clearfix">
+<div class="item-con" style="margin-left: 0;">
+<stl:if testType="LinkUrl" testOperate="Empty" testValue="true">
+<stl:successTemplate>
+<h2 class="nopd"><stl:a title="{Content.Title}">{Content.Title}</stl:a></h2>
+</stl:successTemplate>
+<stl:failureTemplate><h2 class="nopd"><stl:a target="_blank" title="{Content.Title}"><i class="fa fa-link fa-linlin"></i>&nbsp;{Content.Title}</stl:a></h2></stl:failureTemplate>
+</stl:if>
+<p class="des">
+<stl:content type="Summary" />
+</p>
+<div class="autor-meta joimg">
+<span class="in-tags">
+<i class="fa fa-tags"></i> 
+<stl:tags>
+<stl:a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">#{Tag.Name}</stl:a>
+</stl:tags>
+</span>
+<span class="in-times hidden-xs"><i class="fa fa-clock-o"></i> {Content.AddDate} </span>
+</div>
+
+</div>
+</div>
+</stl:successTemplate>
+</stl:if>
+</stl:pageContents>
+
+<!-- pagination -->
+<div class="fy">
+<stl:pageItems>
+<stl:pageItem type="PreviousPage">
+<stl:successTemplate>
+<a class="upleft" href="{Current.Url}">上一页</a>
+</stl:successTemplate>
+<stl:failureTemplate>
+<a class="upleft none" href="javascript:;">上一页</a>
+</stl:failureTemplate>
+</stl:pageItem>
+
+<span>{PageItem.CurrentPageIndex} / {PageItem.TotalPageNum}</span>
+
+<stl:pageItem type="NextPage">
+<stl:successTemplate>
+<a class="fr downright" href="{Current.Url}">下一页</a>
+</stl:successTemplate>
+<stl:failureTemplate>
+<a class="fr downright none" href="javascript:;">下一页</a>
+</stl:failureTemplate>
+</stl:pageItem>
+</stl:pageItems>
+</div>
+</stl:dynamic>
+</div>
+</div>
+</div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<stl:include file="@/include/foot.html" />
+</div>
+</div>
+</body>
+</html>
+<stl:include file="@/include/js.html" />

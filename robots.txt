@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /SiteServer/
+Disallow: /SiteFiles/
+Disallow: /UserCenter/
+Disallow: /blog_iteasea_com/
+Disallow: /code_iteasea_com/
+Disallow: /resume_iteasea_com/

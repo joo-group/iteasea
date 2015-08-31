@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="keywords" content="css3鼠标移上图片放大遮罩效果 | Blog" />
+<meta name="description" content="css3鼠标移上图片放大遮罩效果" />
+<!-- Le fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cdn.iteasea.com/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.iteasea.com/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.iteasea.com/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://cdn.iteasea.com/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="http://cdn.iteasea.com/assets/ico/favicon.ico">
+<link rel="shortcut icon" href="http://cdn.iteasea.com/assets/ico/favicon.png">
+
+<link rel="stylesheet" type="text/css" href="http://cdn.iteasea.com/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.iteasea.com/assets/css/font-awesome.min.css" />
+<!-- Owl Carousel Assets -->
+<link href="http://cdn.iteasea.com/assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn.iteasea.com/assets/css/owl.theme.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn.iteasea.com/assets/jo/style.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn.iteasea.com/assets/jo/responsive.css" rel="stylesheet" type="text/css" />
+    <title>快乐、分享、进步|Blog</title>
+    
+<script>var $pageInfo = { publishmentSystemID : 28, channelID : 41, contentID : 32, siteUrl : "/Blog", homeUrl : "/Blog/center", currentUrl : "http://iteasea.com/Blog/Article/32.html" }</script>
+</head>
+
+<body>
+<script src="/sitefiles/bairong/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <div class="global-box area">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-jo" href="/Blog">
+                <img src="http://cdn.iteasea.com/assets/img/m-logo.png" />
+                <span class="des"><span class="slogn">快乐、分享、进步</span></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse jo-absolute">
+            <ul class="nav navbar-nav">
+                
+                    <li>
+                         <a href="/Blog">Home</a>
+                    </li>
+                
+            
+             
+                    
+                            <li>
+                                <a href="/Blog/JavaScript.html" title="JavaScript">JavaScript</a>
+                            </li>
+                        
+                
+                    
+                            <li>
+                                <a href="/Blog/HTML.html" title="HTML">HTML</a>
+                            </li>
+                        
+                
+                    
+                            <li class="active">
+                                <a href="/Blog/CSS.html" title="CSS">CSS</a>
+                            </li>
+                        
+                
+                    
+                            <li>
+                                <a href="/Blog/Channel/44.html" title="Other">Other</a>
+                            </li>
+                        
+                
+                    
+                            <li>
+                                <a href="/Blog/Tags.html" title="Tags">Tags</a>
+                            </li>
+                        
+                
+            </ul>
+           <!-- <ul class="nav navbar-nav navbar-right">
+               <li class="divider"></li>
+               <li style="font-size:20px;"><a href="javascript:;" class="login"><i class="fa fa-tags"></i></a>
+               </li>
+           </ul> -->
+        </div>
+    </div>
+</nav>
+
+
+
+
+        <div class="jo-left">
+    <div class="logo-box"><a href="/Blog" target="_blank" class="logo">iteasea.com</a><span class="slogn">快乐、分享、进步</span>
+    </div>
+    <div class="nav-box">
+        <ul>
+            
+                    <li>
+                         <a href="/Blog">Home</a>
+                    </li>
+                
+
+            
+                
+                        <li>
+                            <a href="/Blog/JavaScript.html" title="JavaScript">JavaScript</a>
+                        </li>
+                    
+            
+                
+                        <li>
+                            <a href="/Blog/HTML.html" title="HTML">HTML</a>
+                        </li>
+                    
+            
+                
+                        <li>
+                            <a href="/Blog/CSS.html" class="active" title="CSS">CSS</a>
+                        </li>
+                    
+            
+                
+                        <li>
+                            <a href="/Blog/Channel/44.html" title="Other">Other</a>
+                        </li>
+                    
+            
+                
+                        <li>
+                            <a href="/Blog/Tags.html" title="Tags">Tags</a>
+                        </li>
+                    
+            
+        </ul>
+        <div class="nav-fix-bot">
+            <div class="follow">
+                <a href="https://www.facebook.com/hualinlin" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/hualinlin" class="fa fa-twitter"></a>
+                <a href="http://weibo.com/hwj137102506/home" target="_blank" class="fa fa-weibo"></a>
+                <a href="https://github.com/hualinlin" class="fa fa-github"></a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="jo-right">
+            <div class="main-box-c clearfix">
+                <div class="lft">
+                    <div class="jo-content-c">
+                          <div class="post-img" style="background-image: url()">
+                            <div class="overlay"></div>
+                            <div class="single-inner">
+                                <div class="post-head">
+                                    <h1>css3鼠标移上图片放大遮罩效果</h1>
+                                </div>
+                                <div class="post-meta">
+                                    <div class="autor-meta">
+                                        <span class="post-time"><i class="fa fa-clock-o"></i> 2015-02-05  &nbsp;&nbsp; <i class="fa fa-eye"></i> <span id="ajaxElement_1_276"></span>
+<script type="text/javascript" language="javascript">
+function getQueryString()
+{
+  var i, len, params = '', hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  for(i = 0, len = hashes.length, len; i < len; i+=1) {
+    hash = hashes[i].split('=');
+    if (hash && hash.length == 2){
+      value = encodeURIComponent(decodeURIComponent(decodeURIComponent(hash[1])));
+      params += (hash[0] + '=' + value + '&');
+    }
+  }
+  if (params && params.length > 0) params = params.substring(0, params.length - 1);
+  return params;
+}
+function stlDynamic_ajaxElement_1_276(pageNum)
+{
+    try
+    {
+        var url = "/sitefiles/services/cms/dynamic/output.aspx?publishmentSystemID=28&" + getQueryString();
+        var pars = "pageNodeID=41&pageContentID=32&pageTemplateID=13&isPageRefresh=False&pageUrl=gSnUN0add00add0TK0slash049GMlnA0HmMd0add0lLrTNOHKKv2E79xaORo0fi8UFDYZBLLdRp61DikHN&ajaxDivID=ajaxElement_1_276&templateContent=7qhYpiHFFvPM91tqpveaupM60slash0B9f190add0eW6MATDRzhWA0equals0";
+        if (pageNum && pageNum > 0)
+        {
+            pars += "&pageNum=" + pageNum;
+        }
+        jQuery.post(url, pars, function(data,textStatus){
+            jQuery("#ajaxElement_1_276").html(data);
+        });
+
+    }catch(e){}
+}
+stlDynamic_ajaxElement_1_276(0);
+</script>
+</span>
+                                        <span class="post-category">
+            <i class="fa fa-tag"></i>
+            
+            <a href="/Blog/utils/tags.html?tagName=hover" target="_blank">hover</a>
+            
+             </span>
+                                    </div>
+                                    <div class="share-meta hidden-xs">
+                                        <ul>
+                                            <li><a class="jiathis_button_tsina" href="javascript:;" target="_blank"><i class="fa fa-weibo"></i></a>
+                                            </li>
+                                            <li><a class="btn-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
+                                            </li>
+                                            <li><a class="jiathis_button_cqq"><i class="fa fa-qq"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="jo-contents padding-xs">
+                            <div class="jo-co-main text-left">
+                            <p>HTML Code</p><pre class="brush:as3;toolbar:false;">&lt;div id="wrapper"&gt;
+&lt;div class="main_img"&gt;
+     &lt;img src="/Blog/assets/randomImg/27.jpeg"&gt;
+        &lt;div class="show"&gt;
+            &lt;span class="imgArea"&gt;
+                &lt;a title="观看视频" href=#&gt;观看视频&lt;/a&gt;
+            &lt;/span&gt;
+         &lt;/div&gt;
+    &lt;/div&gt;
+&lt;!--main_img end--&gt;
+&lt;/div&gt;</pre><p>CSS Code<br /></p><pre class="brush:as3;toolbar:false;">body {
+    text-align:center;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #222222;
+    font-family:"微软雅黑";
+    line-height: 1.6;
+}
+a{
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+    font-size:14px;
+    color:#333;
+    text-decoration:none;
+    }
+#wrapper {
+    max-width:260px;
+    width:100%;
+    margin:0px auto;
+    margin-top:10px;
+}
+   
+   
+/* main_img */
+.main_img{
+    height: 180px;
+    width: 250px;
+    overflow:hidden;
+    position: relative;
+}
+.main_img img{
+    height: 180px;
+    width: 250px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    z-index:1;
+    transition-delay: 0s;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease;
+    /* Firefox 4 */
+    -moz-transition-delay: 0s;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-timing-function: ease;
+    /* Safari 和 Chrome */
+    -webkit-transition-delay: 0s;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease;
+    /* Opera */
+    -o-transition-delay: 0s;
+    -o-transition-duration: 1s;
+    -o-transition-property: all;
+    -o-transition-timing-function: ease;
+    }
+.main_img .show {
+    background: rgba(0, 0, 0, 0.4);
+    height:180px;
+    left: 0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    position: absolute;
+    top: 0;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    /* Firefox 4 */
+    -moz-transition-delay: 0s;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-property: opacity;
+    -moz-transition-timing-function: ease-in;
+    /* Safari 和 Chrome */
+    -webkit-transition-delay:0s;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: opacity;
+    -webkit-transition-timing-function: ease-in;
+    /* Opera */
+    -o-transition-delay:0s;
+    -o-transition-duration: 0.3s;
+    -o-transition-property: opacity;
+    -o-transition-timing-function: ease-in;
+    width:250px;
+    z-index: 200;
+}
+.main_img .show .imgArea {
+    left: 50%;
+    bottom:0;
+    margin:-15px 0px 0px -40px;
+    opacity: 0;
+    position: absolute;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: ease;
+    /* Firefox 4 */
+    -moz-transition-delay: 0s;
+    -moz-transition-duration: 0.4s;
+    -moz-transition-property: all;
+    -moz-transition-timing-function: ease;
+    /* Safari 和 Chrome */
+    -webkit-transition-delay:0s;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease;
+    /* Opera */
+    -o-transition-delay:0s;
+    -o-transition-duration: 0.4s;
+    -o-transition-property: all;
+    -o-transition-timing-function: ease;
+}
+.main_img .show .imgArea a{
+    color:rgba(255,255,255, 0.8);
+    display:block;
+    padding:5px 12px;
+    border:rgba(255,255,255, 0.6) 1px solid;
+    border-radius:8px;
+    font-size: 16px;
+}
+.main_img .show .imgArea a:hover{
+    background: rgba(255,255,255, 0.7);
+    color:rgba(0,0,0, 0.6);
+}
+.main_img:hover  .show {opacity: 1;filter:alpha(opacity=100);}
+.main_img:hover .show .imgArea{opacity:1;filter:alpha(opacity=100);bottom:40%;}
+.main_img:hover img {
+    transform: scale(1.2, 1.2);
+       
+    -ms-transform:scale(1.2, 1.2);  /* IE 9 */
+    -moz-transform:scale(1.2, 1.2);     /* Firefox */
+    -webkit-transform:scale(1.2, 1.2); /* Safari 和 Chrome */
+    -o-transform:scale(1.2, 1.2);   /* Opera */
+}</pre><p><br /></p>
+                            </div>
+                            
+                            <div class="text-center downdemo">
+                               
+                               
+                               
+                                 <a class="demo" href="/Blog/demo/img-hover-css3-demo.html" target="_blank" title="查看演示">查看演示</a>
+                               
+                                
+                                
+                            </div>
+                            
+                            <div class="alert alert-success txt-align" role="alert">
+                                <h1>原文地址：http://iteasea.com/Blog/Article/32.html</h1>
+                                <br>
+                                <h2>转载时必须以链接形式注明原始出处及本声明! ITeaSea.com 版权所有</h2>
+                            </div>
+                            
+
+                            <div class="clearfix"></div>
+                            <nav style="padding:0 20px;">
+                                <ul class="pager">
+                                    <li class="previous"><a href="javascript:;">&larr; 上一篇</a>
+                                    </li>
+                                    <li class="next"><a href="/Blog/Article/31.html">下一篇 &rarr;</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="clearfix"></div>
+                            <br>
+                            <div class="post-tags">
+                                
+                                    <a href="/Blog/utils/tags.html?tagName=hover">hover</a>
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="post-share hidden-xs">
+                                <a class="jiathis_button_tsina button btn-weibo" title="分享到微博">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a class="button btn-weixin hidden-xs" title="分享到朋友圈">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a class="jiathis_button_cqq button btn-more">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="post-suggest">
+                                <div class="img-title-wrap row-img-title">
+                                    <ul>
+                                        
+                                            <li class="item">
+                                                <a href="/Blog/Article/31.html" class="con" style="background-image: url(/Blog/upload/images/2015/1/2791313800.jpg)">
+                                                    <div class="overlay"></div>
+                                                    <div class="title">
+                                                        <h2>你能相信吗？这些都是由一个DIV元素实现的动画，纯CSS3技术</h2>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+<!-- 多说评论框 start -->   
+<div class="ds-thread" data-thread-key="32" data-title="css3鼠标移上图片放大遮罩效果" data-url="http://iteasea.com/Blog/Article/32.html"></div> <!-- 多说评论框 end --> <!-- 多说公共JS代码 start (一个网页只需插入一次) --> <script type="text/javascript"> var duoshuoQuery = {short_name:"linlinhua"};   (function() {     var ds = document.createElement('script');     ds.type = 'text/javascript';ds.async = true;     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';     ds.charset = 'UTF-8';     (document.getElementsByTagName('head')[0]       || document.getElementsByTagName('body')[0]).appendChild(ds);   })();   </script> <!-- 多说公共JS代码 end -->                            <div class="clearfix"></div>
+                            <!--评论结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-box  margin-xs">
+    <div class="follow follow-footer">
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-weibo"></a>
+        <a href="https://github.com/linlinhua" class="fa fa-github"></a>
+    </div>
+    <div class="clearfix"></div>
+    <span>Copyright © 2015 BY ITEASEA.COM  &nbsp;<span class="hidden-xs"></span></span>
+</div>
+
+<div class="fix-layout" style="display: block;">
+    <a href="javascript:;" class="return-top"><i class="fa fa-angle-up" title="返回顶部"></i></a>
+    <a href="javascript:;" class="qr-code"><i class="fa fa-weixin" title="微信公众账号"></i><div class="code-img" style="display: none;"><img src="/Blog/images/wechat.jpg">
+<p>ID:iteasea</p>
+</div>
+</a>
+</div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="/sitefiles/bairong/scripts/independent/tracker.js" type="text/javascript"></script>
+<script type="text/javascript">AddTrackerCount('/sitefiles/services/cms/PageService.aspx?type=AddTrackerCount&publishmentSystemID=28&channelID=41&contentID=32', 28);</script>
+<script src="/sitefiles/services/cms/PageService.aspx?type=AddCountHits&publishmentSystemID=28&channelID=41&contentID=32" type="text/javascript"></script>
+
+ <script type="text/javascript"> 
+var jiathis_config = {    
+    "title":"【css3鼠标移上图片放大遮罩效果】",
+    "summary":"css3鼠标移上图片放大遮罩效果是一款鼠标移到图片上，图片在固定框内放大，并且文字上浮，图片放大和文字上浮有缓慢的过渡效果。... @华_琳琳",
+    "ralateuid":{"tsina":"hwj137102506"} 
+    } 
+
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+
+<script type="text/javascript" src="http://cdn.iteasea.com/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.iteasea.com/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdn.iteasea.com/assets/js/owl.carousel.js"></script>
+<script type="text/javascript" src="http://cdn.iteasea.com/assets/jo/joozo.js"></script>
+<script type="text/javascript" src="/Blog/assets/js/jquery.qrcode.js" charset="utf-8"></script>
+<!-- 微信二维码分享 -->
+<div class="dia-overlay dia-weixin">
+    <div class="dia-box weixin-con">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>打开微信“扫一扫”，分享到朋友圈</p>
+                    <div id="qrcodeCanvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery('#qrcodeCanvas').qrcode({
+        text: "http://iteasea.com/Blog/Article/32.html"
+    });
+</script>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="鼠标跟随不同方向移入移出" />
+<title>鼠标跟随不同方向移入移出</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{ background:#333;}
+.ul1{ width:855px; margin:5px auto;}
+.ul1 li{ width:245px; height:200px; margin:10px; float:left; position:relative; overflow:hidden; border:10px solid rgba(255,255,255,0.2);}
+.ul1 li img{ display:block; width:100%;}
+.ul1 li span{ position:absolute; left:-245px; top:0; width:100%; height:100%; background:rgb(153,255,0); color:#fff; text-align:center; line-height:200px; font-size:40px; font-weight:bold; font-family:微软雅黑; opacity:0.8; filter:alpha(opacity:80);}
+.copyright{ font-size:14px; text-align:center; font-family:微软雅黑; color:#fff; width:100%; clear:both;}
+</style>
+<script src="move.js"></script>
+<script>
+function rnd(){
+	return parseInt(Math.random()*256);
+}
+
+function hoverDir(obj,ev){
+	var w=obj.offsetWidth;
+	var h=obj.offsetHeight;
+	
+	var x=obj.offsetLeft+w/2-ev.clientX;
+	var y=obj.offsetTop+h/2-ev.clientY;
+	
+	return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
+}
+window.onload=function(){
+	var oUl=document.getElementsByTagName('ul')[0];
+	var aLi=oUl.children;
+	var aSpan=oUl.getElementsByTagName('span');
+	
+	for(var i=0; i<aLi.length; i++){
+		aLi[i].index=i;
+		aLi[i].onmouseover=function(ev){
+			var oEvent=ev || event;
+			var n=hoverDir(this,oEvent);
+			
+			var oFrom=oEvent.fromElement || oEvent.relatedTarget;
+
+			if(this.contains(oFrom)){return;}
+			
+			var oSpan=aSpan[this.index];
+			oSpan.style.background='rgb('+rnd()+','+rnd()+','+rnd()+')';
+			switch(n){
+				case 0:
+					oSpan.style.left='245px';
+					oSpan.style.top=0;
+					break;
+				case 1:
+					oSpan.style.left=0;
+					oSpan.style.top='245px';
+					break;
+				case 2:
+					oSpan.style.left='-245px';
+					oSpan.style.top=0;
+					break;
+				case 3:
+					oSpan.style.left=0;
+					oSpan.style.top='-245px';
+					break;
+			}
+			
+			move(oSpan,{left:0, top:0});
+		};
+		
+		aLi[i].onmouseout=function(ev){
+			var oEvent=ev || event;
+			var n=hoverDir(this,oEvent);
+			var oTo=oEvent.toElement || oEvent.relatedTarget;
+			if(this.contains(oTo)){return;}
+			
+			var oSpan=aSpan[this.index];
+			switch(n){
+				case 0:
+					move(oSpan,{left:245,top:0});
+					break;
+				case 1:
+					move(oSpan,{left:0,top:200});
+					break;
+				case 2:
+					move(oSpan,{left:-245,top:0});
+					break;
+				case 3:
+					move(oSpan,{left:0,top:-200});
+					break;
+			}
+		};
+	}
+};
+</script>
+</head>
+
+<body>
+<ul class="ul1">
+	<li><img src="images/ym1.jpg"><span>美</span></li>
+    <li><img src="images/ym2.jpg"><span>丽</span></li>
+    <li><img src="images/ym3.jpg"><span>生</span></li>
+    <li><img src="images/ym4.jpg"><span>活</span></li>
+    <li><img src="images/ym5.jpg"><span>从</span></li>
+    <li><img src="images/ym6.jpg"><span>此</span></li>
+    <li><img src="images/ym7.jpg"><span>刻</span></li>
+    <li><img src="images/ym8.jpg"><span>开</span></li>
+    <li><img src="images/ym9.jpg"><span>起</span></li>
+</ul>
+
+<div class="copyright">原文地址：http://blog.iteasea.com/Article/6.html
+
+转载时必须以链接形式注明原始出处及本声明! ITeaSea.com 版权所有</div>
+</body>
+</html>

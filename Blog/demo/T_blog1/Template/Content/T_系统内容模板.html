@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <stl:include file="@/include/meta.html" />
+    <title>{stl:value type="slogn"}|{Stl.SiteName}</title>
+    <stl:include file="@/include/highlighter-js.html" />
+</head>
+
+<body>
+    <div class="global-box area">
+        <stl:include file="@/include/ResponsiveNav.html" />
+        <stl:include file="@/include/FixedNav.html" />
+        <stl:include file="@/include/login.html" />
+        <div class="jo-right">
+            <div class="main-box-c clearfix">
+                <div class="lft">
+                    <div class="jo-content-c">
+                        <div class="post-img" style="background-image: url({Content.ImageUrl})">
+                            <div class="overlay"></div>
+                            <div class="single-inner">
+                                <div class="post-head">
+                                    <h1>{Content.Title}</h1>
+                                </div>
+                                <div class="post-meta">
+                                    <div class="autor-meta">
+                                        <span class="post-time"><i class="fa fa-clock-o"></i> <stl:content type="AddDate" />  &nbsp;&nbsp; <i class="fa fa-eye"></i> <stl:content type="Hits" /></span>
+                                        <span class="post-category">
+            <i class="fa fa-tag"></i>
+            <stl:tags context="Content" totalNum="3">
+            <stl:a target="_blank" href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">{Tag.Name}</stl:a>
+            </stl:tags>
+             </span>
+                                    </div>
+                                    <div class="share-meta hidden-xs">
+                                        <ul>
+                                            <li><a class="jiathis_button_tsina" href="javascript:;" target="_blank"><i class="fa fa-weibo"></i></a>
+                                            </li>
+                                            <li><a class="btn-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
+                                            </li>
+                                            <li><a class="jiathis_button_cqq"><i class="fa fa-qq"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="jo-contents padding-xs">
+                            <div class="jo-co-main text-left">
+                            <stl:content type="Content"></stl:content>
+                            </div>
+                            
+                            <div class="text-center downdemo">
+                               <stl:if testType="FileUrl" testOperate="NotEmpty">                            
+                                       <a class="down hidden-xs" href="{Content.FileUrl}" title="下载示例">下载示例</a>
+                               </stl:if>
+                               
+                               <stl:if testType="SubTitle" testOperate="NotEmpty">
+                                       <a class="demo" href="{Stl.SiteUrl}/demo/{Content.SubTitle}" target="_blank" title="查看演示">查看演示</a>
+                               </stl:if>
+                                
+                                
+                            </div>
+                            
+                            <div class="alert alert-success txt-align" role="alert">
+                                <h1>原文地址：{Stl.CurrentUrl}</h1>
+                                <br>
+                                <h2>转载时必须以链接形式注明原始出处及本声明! ITeaSea.com 版权所有</h2>
+                            </div>
+                            
+
+                            <div class="clearfix"></div>
+                            <nav style="padding:0 20px;">
+                                <ul class="pager">
+                                    <li class="previous"><a href="{Navigation.PreviousContent}">&larr; 上一篇</a>
+                                    </li>
+                                    <li class="next"><a href="{Navigation.NextContent}">下一篇 &rarr;</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="clearfix"></div>
+                            <br>
+                            <div class="post-tags">
+                                <stl:tags context="Content">
+                                    <stl:a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">{Tag.Name}</stl:a>
+                                </stl:tags>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="post-share hidden-xs">
+                                <a class="jiathis_button_tsina button btn-weibo" title="分享到微博">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a class="button btn-weixin hidden-xs" title="分享到朋友圈">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a class="jiathis_button_cqq button btn-more">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="post-suggest">
+                                <div class="img-title-wrap row-img-title">
+                                    <ul>
+                                        <stl:contents isRelatedContents="true" totalNum="3" order="AddDate" isImage="true">
+                                            <li class="item">
+                                                <stl:a class="con" style="background-image: url({Content.ImageUrl})">
+                                                    <div class="overlay"></div>
+                                                    <div class="title">
+                                                        <h2><stl:content type="Title" /></h2>
+                                                    </div>
+                                                </stl:a>
+                                            </li>
+                                        </stl:contents>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix"></div>
+                            <!--评论结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <stl:include file="@/include/foot.html" />
+        </div>
+    </div>
+</body>
+
+</html>
+ <script type="text/javascript"> 
+var jiathis_config = {    
+    "title":"【<stl:content type="Title"></stl:content>】",
+    "summary":"<stl:content type="summary" wordNum="70"></stl:content>... @华_琳琳",
+    "ralateuid":{"tsina":"hwj137102506"} 
+    } 
+
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+
+<stl:include file="@/include/js.html" />
+<script type="text/javascript" src="{Stl.SiteUrl}/assets/js/jquery.qrcode.js" charset="utf-8"></script>
+<!-- 微信二维码分享 -->
+<div class="dia-overlay dia-weixin">
+    <div class="dia-box weixin-con">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>打开微信“扫一扫”，分享到朋友圈</p>
+                    <div id="qrcodeCanvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery('#qrcodeCanvas').qrcode({
+        text: "{Stl.CurrentUrl}"
+    });
+</script>
+

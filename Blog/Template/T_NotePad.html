@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <stl:include file="@/include/meta.html" />
+    <title>{stl:value type="slogn"}|{Stl.SiteName} - {Channel.Title}</title>
+</head>
+
+<body>
+    <div class="global-box area">
+        <stl:include file="@/include/ResponsiveNav.html" />
+        <stl:include file="@/include/FixedNav.html" />
+        <div class="jo-right">
+            <div class="main-box clearfix">
+                <div class="lft">
+                    <div class="jo-content">
+                        <div class="jo-topchannels10"></div>
+                            <stl:channel type="ImageUrl" width="100%" />
+                        <div class="post-autor">
+                            <div class="inner-wrap">
+                                <div class="post-list">
+                                    <div class="news-list">
+                                            <stl:pageContents pageNum="20" scope="SelfAndChildren" order="AddDate">
+                                                <div class="item clearfix">
+        <blockquote>
+          <p class="text-left"><stl:content type="Title" /></p>
+          <footer class="text-left"><stl:content type="Content" /><hr>
+          <div class="text-right"><i><stl:content type="AddDate" /></i></div></footer>
+        </blockquote>
+                                                </div>
+                                            </stl:pageContents>
+
+                                            <!-- pagination -->
+                                            <div class="fy">
+                                                <stl:pageItems>
+                                                    <stl:pageItem type="PreviousPage">
+                                                        <stl:successTemplate>
+                                                            <a class="upleft" href="{Current.Url}">上一页</a>
+                                                        </stl:successTemplate>
+                                                        <stl:failureTemplate>
+                                                            <a class="upleft none" href="javascript:;">上一页</a>
+                                                        </stl:failureTemplate>
+                                                    </stl:pageItem>
+
+                                                    <span>{PageItem.CurrentPageIndex} / {PageItem.TotalPageNum}</span>
+
+                                                    <stl:pageItem type="NextPage">
+                                                        <stl:successTemplate>
+                                                            <a class="fr downright" href="{Current.Url}">下一页</a>
+                                                        </stl:successTemplate>
+                                                        <stl:failureTemplate>
+                                                            <a class="fr downright none" href="javascript:;">下一页</a>
+                                                        </stl:failureTemplate>
+                                                    </stl:pageItem>
+                                                </stl:pageItems>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <stl:include file="@/include/foot.html" />
+        </div>
+    </div>
+</body>
+
+</html>
+<stl:include file="@/include/js.html" />

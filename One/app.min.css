@@ -1,0 +1,12 @@
+body,html{overflow:hidden;margin:0;font-family:"Microsoft Yahei";-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none}
+ul{margin:0;padding:0;list-style:none}
+li{display:inline-block;line-height:1.8em;margin:0 10px}
+.wrapper{position:absolute;width:320px;height:350px;top:50%;left:50%;margin:-175px 0 0 -160px;text-align:center}
+.do,.guy{position:relative}
+.guy{color:#333}
+.avatar{display:block;margin:0 auto 10px;border-radius:100%;border:10px solid rgba(244,121,131,.5)}
+.me{display:inline-block;padding:5px 15px;background:rgba(244,121,131,.88);color:#fff;font-weight:100;font-size:.6em;text-shadow:0 1px 0 #41474e;border-radius:5px}
+.do{color:#999;font-weight:400;font-size:15px;letter-spacing:.12em}
+.cc{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;pointer-events:none}
+a{color:rgba(244,121,131,.88); font-size:18px;}
+a:hover{color:#000;-moz-transition:color 1s;-webkit-transition:color 1s;-o-transition:color 1s;transition:color 1s}

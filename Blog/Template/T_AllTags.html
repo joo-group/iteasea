@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <stl:include file="@/include/meta.html" />
+    <title>{stl:value type="slogn"}|{Stl.SiteName} - {Channel.Title}</title>
+    <link href="{Stl.SiteUrl}/assets/css/tags.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="global-box area">
+        <stl:include file="@/include/ResponsiveNav.html" />
+        <stl:include file="@/include/FixedNav.html" />
+        <div class="jo-right">
+            <div class="main-box clearfix">
+                <div class="lft">
+                    <div class="jo-content">
+                        <stl:channel type="ImageUrl" width="100%" />
+                        <div class="today-new">
+                            <div class="jo-location">
+                                <stl:location separator=" / " />
+                            </div>
+                        </div>
+                        <div class="post-autor">
+                            <div class="inner-wrap">
+                                <div class="post-list">
+                                    <div class="alltags">
+                                     <stl:tags tagLevel="1" context="Channel">
+                                        <stl:a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}" title="{Tag.Name}">{Tag.Name} <span class="tagstotal">{Tag.Count}</span></stl:a>
+                                    </stl:tags>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <stl:include file="@/include/foot.html" />
+        </div>
+    </div>
+</body>
+
+</html>
+<stl:include file="@/include/js.html" />
+<script>
+    $(function(){
+        $(".tagstotal").each(function(){var self=$(this);var cname="tags0 tags_"+self.text();self.parent().attr("class",cname);});
+    });
+</script>
+

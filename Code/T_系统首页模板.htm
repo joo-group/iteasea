@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="code of hualinlin">
+    <meta name="author" content="hualinlin">
+
+    <title>Code of ITeaSea.com</title>
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.iteasea.com/assets/css/code.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="code-wrapper">
+    <div class="container">
+      <h1>
+            <a href="http://iteasea.com" target="_blank" class="fixed-home" title="Home"><span class="glyphicon glyphicon-home"></span></a>
+            <a href="http://iteasea.com/blog/" target="_blank" class="fixed-home" title="blog"><span class="glyphicon glyphicon-heart"></span></a>
+            &lt;Code&gt;
+            <a href="http://iteasea.com/me" target="_blank" class="fixed-home" title="me"><span class="glyphicon glyphicon-user"></span></a>
+            <a href="http://about.me/hualinlin" target="_blank" class="fixed-home" title="about.me"><span class="glyphicon glyphicon-envelope"></span></a>
+        </h1>
+
+
+            <div class="code-contents">
+                <div class="row">
+                <stl:dynamic>
+                <stl:pageContents channelIndex="首页" pageNum="16" order="AddDate">
+                  <div class="col-md-6">
+                    <div class="contents">
+                      <div class="symbol">{Content.SubTitle}</div>
+                      <div class="title"><stl:a target="_blank" title="{Content.FullTitle}"><stl:content type="Title"></stl:content></stl:a></div>
+                        <div class="adddate">Date:<stl:content type="AddDate" formatString="yyyy/MM/dd"></stl:content></div>
+                        <div class="hits">Hits:<stl:content type="Hits" isDynamic="true"></stl:content></div>
+                    </div>
+                  </div>
+                 </stl:pageContents>
+
+                  <div class="clearfix"></div>
+                  <stl:pageItems>
+                    <a href="{PageItem.NextPage}" class="page-btn"> </a>
+                  </stl:pageItems>
+                 </stl:dynamic>
+                </div>
+            </div>
+            <footer>Copyright @ 2015 By ITeaSea.com</footer>
+     </div>
+    </div>
+  </body>
+</html>
